@@ -15,3 +15,12 @@
 
 // Come up with a clear, simple name for the function
 // Use the string documentation to help you plan your solution
+
+
+function text(y){
+    return y.replaceAll(" ","_").toUpperCase();
+}
+
+console.log(text("lord of the rings"));             
+console.log(text("the great gatsby"));         
+console.log(text("the da vinci code"));         
