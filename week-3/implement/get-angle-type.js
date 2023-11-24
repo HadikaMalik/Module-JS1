@@ -21,3 +21,27 @@
 // Identify Reflex Angles:
 // When the angle is greater than 180 degrees and less than 360 degrees,
 // Then the function should return "Reflex angle"
+
+function triangleAngle(degrees){
+    if (degrees === 90)
+    return 'Right angle';
+
+    else if (degrees < 90)
+    return 'Acute angle';
+    
+    else if (degrees > 90 && degrees < 180)
+    return 'Obtuse';
+
+    else if (degrees === 180)
+    return 'Straight angle'
+
+    else if (degrees > 180 && degrees < 360)
+    return 'Reflex angle'
+       
+    }
+
+    console.log(triangleAngle(90));
+    console.log(triangleAngle(45));
+    console.log(triangleAngle(105));
+    console.log(triangleAngle(180));
+    console.log(triangleAngle(220));
