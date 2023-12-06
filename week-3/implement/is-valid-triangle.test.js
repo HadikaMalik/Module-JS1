@@ -52,26 +52,32 @@ function isValidTriangle(a,b,c){
        
     }
 
-const currentOutput = isValidTriangle(3,3,3);
-const targetOutput = 'True'
+// const currentOutput = isValidTriangle(3,3,3);
+// const targetOutput = 'True'
 
-console.assert(
-    currentOutput === targetOutput,
-    `current output: ${currentOutput}, target output: ${targetOutput}`
-)
+// console.assert(
+//     currentOutput === targetOutput,
+//     `current output: ${currentOutput}, target output: ${targetOutput}`
+// )
 
-const currentOutput1 = isValidTriangle(3,3,6);
-const targetOutput1 = 'False'
+// const currentOutput1 = isValidTriangle(3,3,6);
+// const targetOutput1 = 'False'
 
-console.assert(
-    currentOutput1 === targetOutput1,
-    `current output: ${currentOutput1}, target output: ${targetOutput1}`
-)
+// console.assert(
+//     currentOutput1 === targetOutput1,
+//     `current output: ${currentOutput1}, target output: ${targetOutput1}`
+// )
 
-const currentOutput2 = isValidTriangle(3,3,0);
-const targetOutput2 = 'False'
+// const currentOutput2 = isValidTriangle(3,3,0);
+// const targetOutput2 = 'False'
 
-console.assert(
-    currentOutput2 === targetOutput2,
-    `current output: ${currentOutput2}, target output: ${targetOutput2}`
-)
+// console.assert(
+//     currentOutput2 === targetOutput2,
+//     `current output: ${currentOutput2}, target output: ${targetOutput2}`
+// )
+
+test("checks is triangle is valid", function () {
+    expect(isValidTriangle(3,3,3)).toBe(`True`);
+    expect(isValidTriangle(3,3,6)).toBe(`False`);
+    expect(isValidTriangle(3,3,0)).toBe(`False`);
+  });

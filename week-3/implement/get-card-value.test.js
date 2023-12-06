@@ -51,25 +51,32 @@ function getCardValue(cardString){
     // console.log(getCardValue('A'));
     // console.log(getCardValue('Z'));
 
-const currentOutput = getCardValue('K');
-const targetOutput = 5
-const targetOutput1 = 10
-const targetOutput2 = 11
-const targetOutput3 = "Invalid card rank"
+// const currentOutput = getCardValue('K');
+// const targetOutput = 5
+// const targetOutput1 = 10
+// const targetOutput2 = 11
+// const targetOutput3 = "Invalid card rank"
 
-console.assert(
-    currentOutput === targetOutput,
-    `current output: ${currentOutput}, target output: ${targetOutput}`
-)
-console.assert(
-    currentOutput === targetOutput1,
-    `current output: ${currentOutput}, target output: ${targetOutput1}`
-)
-console.assert(
-    currentOutput === targetOutput2,
-    `current output: ${currentOutput}, target output: ${targetOutput2}` 
-)
-console.assert(
-    currentOutput === targetOutput3,
-    `current output: ${currentOutput}, target output: ${targetOutput3}`
-);
+// console.assert(
+//     currentOutput === targetOutput,
+//     `current output: ${currentOutput}, target output: ${targetOutput}`
+// )
+// console.assert(
+//     currentOutput === targetOutput1,
+//     `current output: ${currentOutput}, target output: ${targetOutput1}`
+// )
+// console.assert(
+//     currentOutput === targetOutput2,
+//     `current output: ${currentOutput}, target output: ${targetOutput2}` 
+// )
+// console.assert(
+//     currentOutput === targetOutput3,
+//     `current output: ${currentOutput}, target output: ${targetOutput3}`
+// );
+
+test("checks card value", function () {
+    expect(getCardValue(10)).toBe(10);
+    expect(getCardValue(`J`)).toBe(10);
+    expect(getCardValue(`A`)).toBe(11);
+    expect(getCardValue(`Z`)).toBe('Invalid card rank');
+  });

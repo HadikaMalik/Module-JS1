@@ -36,19 +36,19 @@
 
 function properFraction(num,den){
 
+    if (den === 0)
+    return 'Error';
+
     if (num < den)
     return 'True';
 
-    else if (num > den || num === den)
+    if (num > den || num === den)
     return 'False';
 
-    else if (den == 0)
-    return 'Error';
-
-    else if (num < 0 && num < den)
+    if (num < 0 && num < den)
     return 'True';
 
-    else if (num === den)
+    if (num === den)
     return 'False';
        
     }
@@ -59,42 +59,50 @@ function properFraction(num,den){
     // console.log(properFraction(-4,7));
     // console.log(properFraction(3,3));
 
-const currentOutput = properFraction(2,3);
-const targetOutput = 'True'
+// const currentOutput = properFraction(2,3);
+// const targetOutput = 'True'
 
-console.assert(
-    currentOutput === targetOutput,
-    `current output: ${currentOutput}, target output: ${targetOutput}`
-)
+// console.assert(
+//     currentOutput === targetOutput,
+//     `current output: ${currentOutput}, target output: ${targetOutput}`
+// )
 
-const currentOutput1 = properFraction(5,2);
-const targetOutput1 = 'False'
+// const currentOutput1 = properFraction(5,2);
+// const targetOutput1 = 'False'
 
-console.assert(
-    currentOutput1 === targetOutput1,
-    `current output: ${currentOutput1}, target output: ${targetOutput1}`
-)
+// console.assert(
+//     currentOutput1 === targetOutput1,
+//     `current output: ${currentOutput1}, target output: ${targetOutput1}`
+// )
 
-const currentOutput2 = properFraction(3,0);
-const targetOutput2 = 'Error'
+// const currentOutput2 = properFraction(3,0);
+// const targetOutput2 = 'Error'
 
-console.assert(
-    currentOutput2 === targetOutput2,
-    `current output: ${currentOutput2}, target output: ${targetOutput2}`
-)
+// console.assert(
+//     currentOutput2 === targetOutput2,
+//     `current output: ${currentOutput2}, target output: ${targetOutput2}`
+// )
 
-const currentOutput3 = properFraction(-4,7);
-const targetOutput3 = 'True'
+// const currentOutput3 = properFraction(-4,7);
+// const targetOutput3 = 'True'
 
-console.assert(
-    currentOutput3 === targetOutput3,
-    `current output: ${currentOutput3}, target output: ${targetOutput3}`
-)
+// console.assert(
+//     currentOutput3 === targetOutput3,
+//     `current output: ${currentOutput3}, target output: ${targetOutput3}`
+// )
 
-const currentOutput4 = properFraction(3,3);
-const targetOutput4 = 'False'
+// const currentOutput4 = properFraction(3,3);
+// const targetOutput4 = 'False'
 
-console.assert(
-    currentOutput4 === targetOutput4,
-    `current output: ${currentOutput4}, target output: ${targetOutput4}`
-)
+// console.assert(
+//     currentOutput4 === targetOutput4,
+//     `current output: ${currentOutput4}, target output: ${targetOutput4}`
+// )
+
+test("checks if fraction is proper fraction", function () {
+    expect(properFraction(2,3)).toBe(`True`);
+    expect(properFraction(5,2)).toBe(`False`);
+    expect(properFraction(3,0)).toBe(`Error`);
+    expect(properFraction(-4,7)).toBe('True');
+    expect(properFraction(3,3)).toBe('False');
+  });

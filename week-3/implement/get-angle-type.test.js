@@ -40,8 +40,16 @@ function triangleAngle(degrees){
        
     }
 
-    console.log(triangleAngle(90));
-    console.log(triangleAngle(45));
-    console.log(triangleAngle(105));
-    console.log(triangleAngle(180));
-    console.log(triangleAngle(220));
+    // console.log(triangleAngle(90));
+    // console.log(triangleAngle(45));
+    // console.log(triangleAngle(105));
+    // console.log(triangleAngle(180));
+    // console.log(triangleAngle(220));
+
+    test("idenity the angle type", function () {
+        expect(triangleAngle(90)).toBe("Right angle");
+        expect(triangleAngle(45)).toBe("Acute angle");
+        expect(triangleAngle(105)).toBe("Obtuse");
+        expect(triangleAngle(180)).toBe("Straight angle");
+        expect(triangleAngle(220)).toBe("Reflex angle");
+      });
