@@ -15,7 +15,7 @@ console.log(result);
 
 // a) How many variable declarations are there in this program? - just 7
 
-// b) How many function calls are there? - 2 
+// b) How many function calls are there? - there's only 1 which is console.log
 
 // c) Using documentation on MDN, explain what the expression movieLength % 60 represents - The remainder (%) operator returns the remainder left over when one operand is divided by a second operand. It always takes the sign of the dividend.
 
