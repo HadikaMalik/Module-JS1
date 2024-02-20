@@ -1,8 +1,6 @@
 // Predict and explain first...
 
-let num = 103;
-
-function getLastDigit() {
+function getLastDigit(num) {
   return num.toString().slice(-1);
 }
 

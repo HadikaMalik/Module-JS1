@@ -5,7 +5,7 @@
 // Call this function a number of times to check it works for different inputs
 
 
-function money(penceString){
+function penceToPounds(penceString){
 
 const penceStringWithoutTrailingP = penceString.substring(0,penceString.length - 1);
 
@@ -17,6 +17,6 @@ const pence = paddedPenceNumberString.substring(paddedPenceNumberString.length -
 return`£${pounds}.${pence}`;
 }
 
-console.log(money("489p"));
-console.log(money("6349p"));
-console.log(money("73p"));
+console.log(penceToPounds("489p"));
+console.log(penceToPounds("6349p"));
+console.log(penceToPounds("73p"));

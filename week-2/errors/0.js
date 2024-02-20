@@ -9,4 +9,5 @@ function capitalise(str) {
   return str;
 } 
 
-// str is defined two times, once in function parameter and again in function body, to chnage the error, all we hve to do is remove let from let str and it will work 
+// error message would be identifier str has already been declared because 
+//str is defined two times, once in function parameter and again in function body, to chnage the error, all we hve to do is remove let from let str and it will work 
