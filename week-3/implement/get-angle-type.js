@@ -26,7 +26,7 @@ function triangleAngle(degrees){
     if (degrees === 90)
     return 'Right angle';
 
-    else if (degrees < 90)
+    else if (degrees < 90 && degrees > 0)
     return 'Acute angle';
     
     else if (degrees > 90 && degrees < 180)
@@ -37,7 +37,18 @@ function triangleAngle(degrees){
 
     else if (degrees > 180 && degrees < 360)
     return 'Reflex angle'
-       
+
+    else if (degrees < 0)
+    return 'Negative angle'
+
+    else if (degrees === 360)
+    return 'Full rotation-360 degrees'
+
+    else if (degrees >360)
+    return 'Greater than 360'
+
+    else 
+    return 'Invalid angle'
     }
 
     console.log(triangleAngle(90));
@@ -45,3 +56,6 @@ function triangleAngle(degrees){
     console.log(triangleAngle(105));
     console.log(triangleAngle(180));
     console.log(triangleAngle(220));
+    console.log(triangleAngle(-23));
+    console.log(triangleAngle(360));
+    console.log(triangleAngle(420));
